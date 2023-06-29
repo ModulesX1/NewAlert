@@ -60,6 +60,7 @@
 }
 .alert-\>button svg {
   cursor: pointer;
+  padding: 5px;
 }
 
 .alert-\>progress {
