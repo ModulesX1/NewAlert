@@ -11,3 +11,4 @@ btn.onclick = () => alert.fire({
 })
 
 ```
+![thumbnail](https://modulesx1.github.io/Screenshot%202023-06-29%20223434.png)
