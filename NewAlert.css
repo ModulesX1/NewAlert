@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+.alert-\>container {
+  font-family: "Poppins", sans-serif;
+  max-width: calc(100% - 2em);
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  z-index: 2147483647;
+  user-select: none;
+  position: fixed;
+  width: 320px;
+  right: 1em;
+  top: 1em;
+}
+
+.alert-\>toast {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 9px;
+  position: relative;
+  overflow: hidden;
+}
+
+.alert-\>item {
+  grid-template-columns: 65px auto 35px;
+  min-height: 55px;
+  display: grid;
+}
+
+.alert-\>icon {
+  border-left: 6px solid var(--icon-color);
+  border-bottom-left-radius: 9px;
+  border-top-left-radius: 9px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.alert-\>icon svg {
+  height: 30px;
+  width: 30px;
+}
+
+.alert-\>content {
+  padding: 10px 0;
+}
+.alert-\>content .alert-\>header {
+  font-weight: 500;
+  font-size: 14pt;
+}
+.alert-\>content .alert-\>message {
+  font-weight: 300;
+  font-size: 11pt;
+}
+
+.alert-\>button {
+  justify-content: center;
+  padding-top: 10px;
+  display: flex;
+}
+.alert-\>button svg {
+  cursor: pointer;
+}
+
+.alert-\>progress {
+  animation: ProgressBar var(--alert-timeout);
+  background: var(--progress-color);
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  width: 0;
+  left: 0;
+}
+
+.alert-\>toast.alert-\>show {
+  animation: ShowAlert 800ms;
+}
+
+.alert-\>toast.alert-\>hide {
+  animation: HideAlert 800ms;
+}
+
+@keyframes ShowAlert {
+  0% {
+    transform: translate(40px, -20px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(-1em) scale(1.1);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes HideAlert {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+}
+@keyframes ProgressBar {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@-webkit-keyframes ShowAlert {
+  0% {
+      -webkit-transform: translate(40px,-20px);
+      opacity: 0;
+  }
+  70% {
+      -webkit-transform: translateX(-1em) scale(1.1);
+  }
+  100% {
+      -webkit-transform: translateX(0);
+      opacity: 1;
+  }
+}
+@-webkit-keyframes HideAlert {
+  0% {
+      -webkit-transform: translateX(0);
+      opacity: 1;
+  }
+  100% {
+      -webkit-transform: translateX(40px);
+      opacity: 0;
+  }
+}
+@-webkit-keyframes ProgressBar {
+  0% {
+      width: 100%;
+  }
+  100% {
+      width: 0%;
+  }
+}
+@-moz-keyframes ShowAlert {
+  0% {
+      -moz-transform: translate(40px,-20px);
+      opacity: 0;
+  }
+  70% {
+      -moz-transform: translateX(-1em) scale(1.1);
+  }
+  100% {
+      -moz-transform: translateX(0);
+      opacity: 1;
+  }
+}
+@-moz-keyframes HideAlert {
+  0% {
+      -moz-transform: translateX(0);
+      opacity: 1;
+  }
+  100% {
+      -moz-transform: translateX(40px);
+      opacity: 0;
+  }
+}
+@-moz-keyframes ProgressBar {
+  0% {
+      width: 100%;
+  }
+  100% {
+      width: 0%;
+  }
+}
+@-ms-keyframes ShowAlert {
+  0% {
+      -ms-transform: translate(40px,-20px);
+      opacity: 0;
+  }
+  70% {
+      -ms-transform: translateX(-1em) scale(1.1);
+  }
+  100% {
+      -ms-transform: translateX(0);
+      opacity: 1;
+  }
+}
+@-ms-keyframes HideAlert {
+  0% {
+      -ms-transform: translateX(0);
+      opacity: 1;
+  }
+  100% {
+      -ms-transform: translateX(40px);
+      opacity: 0;
+  }
+}
+@-ms-keyframes ProgressBar {
+  0% {
+      width: 100%;
+  }
+  100% {
+      width: 0%;
+  }
+}
+/*# sourceMappingURL=NewAlert.css.map */
