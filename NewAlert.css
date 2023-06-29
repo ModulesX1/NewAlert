@@ -7,7 +7,7 @@
   z-index: 2147483647;
   user-select: none;
   position: fixed;
-  width: 320px;
+  min-width: 280px;
   right: 1em;
   top: 1em;
 }
@@ -43,6 +43,7 @@
 
 .alert-\>content {
   padding: 10px 0;
+  max-width: 215px;
 }
 .alert-\>content .alert-\>header {
   font-weight: 500;
@@ -205,4 +206,3 @@
       width: 0%;
   }
 }
-/*# sourceMappingURL=NewAlert.css.map */
