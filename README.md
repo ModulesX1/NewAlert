@@ -3,7 +3,7 @@
 example
 ``` js
 
-btn.onclick = () => alert.fire({
+alert.fire({
     timeout: 5000,
     type: "success", // [ "success", "error", "warning", "info" ]
     header: "Successfully",
