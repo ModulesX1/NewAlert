@@ -2,7 +2,10 @@
 
 ลิงค์สคริปต์และสไตล์
 ``` html
-<link rel="stylesheet" href="./NewAlert.css">
+<!-- in head tag -->
+<link rel="preload stylesheet" as="style" href="./NewAlert.css"><link rel="preload" as="script" href="./NewAlert.js">
+
+<!-- in body tag -->
 <script src="./NewAlert.js"></script>
 ```
 
