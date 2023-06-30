@@ -169,7 +169,7 @@ function NewAlert( options ) {
     const AlertProgress = util.createAlertNode( "div", {
         className: "alert->progress"
     });
-    AlertProgress.setAttribute( "style", `--progress-color:${util.icons[ options.type || "info" ]['color']};--alert-timeout:${ ( (typeof options.timeout === "number" ? options.timeout + 200 : false ) || 3700 ) + "ms" }` );
+    AlertProgress.setAttribute( "style", `--progress-color:${util.icons[ options.type || "info" ]['color']};--alert-timeout:${ ( (typeof options.timeout === "number" ? options.timeout + 1000 : false ) || 4500 ) + "ms" }` );
 
     AlertItem.appendChild( AlertIcon );
     AlertItem.appendChild( AlertContent );
