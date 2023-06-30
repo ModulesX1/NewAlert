@@ -1,6 +1,12 @@
 ## New Alert System for Website
 
-example
+ลิงค์สคริปต์และสไตล์
+``` html
+<link rel="stylesheet" href="./NewAlert.css">
+<script src="./NewAlert.js"></script>
+```
+
+ตัวอย่างกอย่างการเรียกใช้งาน
 ``` js
 
 alert.fire({
