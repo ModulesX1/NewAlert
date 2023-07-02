@@ -101,10 +101,11 @@ const util = {
     /**
      * @param { AlertToast } Toast Alert toast item
      */
-    removeToast( Toast ) {
+    removeToast( Toast, callback ) {
         Toast.classList.replace( "alert->show", "alert->hide" );
         setTimeout( function() {
             Toast && Toast.remove();
+            typeof callback === "function" && !callback(true);
         }, 400 )
     }
 }
@@ -123,7 +124,7 @@ GlobalWindow['document']['body']['appendChild']( AlertContainer );
  * @param { "success" | "error" | "warning" | "info" } options.type Alert type ( default = info )
  * @param { String } options.header Alert header
  * @param { String } options.content Alert text content
- * 
+ * @param { Function } options.success Callback function if alert closed
  */
 function NewAlert( options ) {
 
@@ -180,7 +181,7 @@ function NewAlert( options ) {
 
     AlertContainer.insertAdjacentElement( "afterbegin", AlertToast );
     setTimeout( function() {
-        util.removeToast( AlertToast );
+        util.removeToast( AlertToast, options.success );
     }, options.timeout || 3500 )
 
 }
