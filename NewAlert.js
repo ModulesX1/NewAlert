@@ -185,7 +185,11 @@ function NewAlert( options ) {
     }, options.timeout || 3500 )
 
 }
-
+    
+NewAlert.clear = function() {
+    AlertContainer.innerHTML = "";
+}
+    
 GlobalWindow['alert']['fire'] = NewAlert;
 
 });
