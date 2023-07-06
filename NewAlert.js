@@ -1,5 +1,5 @@
 /**
- * NewAlert v1.0.0 beta
+ * NewAlert v1.1.0 beta
  * Copyright 2023 Mr.Phiraphan
  * Licensed under MIT
  */
@@ -130,7 +130,7 @@ GlobalWindow['document']['body']['appendChild']( AlertContainer );
  * @param { Function } options.success Callback function if alert closed
  */
 function NewAlert( options ) {
-
+    
     const AlertToast = util.createAlertNode( "div", {
         className: "alert->toast alert->show"
     });
@@ -186,13 +186,20 @@ function NewAlert( options ) {
     setTimeout( function() {
         util.removeToast( AlertToast, options.success );
     }, options.timeout || 3500 )
+}
+    
+const build = {
+    clear() {
+        AlertContainer.querySelectorAll(".alert-\\>toast").forEach( evt => {
+            evt.closed = true;
+        })
+        AlertContainer.innerHTML = "";
+    },
+    version: "1.1.0"
+}
 
-}
-    
-NewAlert.clear = function() {
-    AlertContainer.innerHTML = "";
-}
-    
-GlobalWindow['alert']['fire'] = NewAlert;
+GlobalWindow['alert']['fire'] = NewAlert.bind();
+GlobalWindow['alert']['fire']['clear'] = build.clear;
+GlobalWindow['alert']['fire']['version'] = build.version;
 
 });
