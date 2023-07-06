@@ -104,8 +104,11 @@ const util = {
     removeToast( Toast, callback ) {
         Toast.classList.replace( "alert->show", "alert->hide" );
         setTimeout( function() {
-            Toast && Toast.remove();
-            typeof callback === "function" && !callback(true);
+            if ( !Toast.closed ) {
+                Toast.remove();
+                Toast.closed = true;
+                typeof callback === "function" && !callback(true);
+            }
         }, 400 )
     }
 }
@@ -165,7 +168,7 @@ function NewAlert( options ) {
     });
     const SvgHideAlert = util.createAlertNodeNS( util.icons.close );
     AlertButton.appendChild( SvgHideAlert );
-    AlertButton.onclick = () => util.removeToast( AlertToast );
+    AlertButton.onclick = () => util.removeToast( AlertToast, options.success );
 
     const AlertProgress = util.createAlertNode( "div", {
         className: "alert->progress"

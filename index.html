@@ -15,7 +15,10 @@ tms.onclick = () => alert.fire({
     timeout: 5000,
     type: [ "success", "error", "warning", "info" ][ Math.floor( Math.random() * 4 ) ],
     header: "Successfully",
-    content: "Login successfull"
+    content: "Login successfull",
+    success() {
+        console.log( Date.now() )
+    }
 })
 
 </script>
