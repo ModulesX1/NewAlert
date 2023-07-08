@@ -3,10 +3,10 @@
 ลิงค์สคริปต์และสไตล์
 ``` html
 <!-- in head tag -->
-<link rel="preload stylesheet" as="style" href="https://ModulesX1.github.io/assets/NewAlert/style.min.css">
+<link rel="preload stylesheet" as="style" href="https://modulesx1.github.io/assets/NewAlert/style.min.css">
 
 <!-- in body tag -->
-<script src="https://ModulesX1.github.io/assets/NewAlert/script.min.js"></script>
+<script src="https://modulesx1.github.io/assets/NewAlert/script.min.js"></script>
 ```
 
 ตัวอย่างกอย่างการเรียกใช้งาน
