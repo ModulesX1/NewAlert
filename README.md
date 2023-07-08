@@ -1,6 +1,6 @@
 ## New Alert System for Website
 
-ลิงค์สคริปต์และสไตล์ [ดูโค้ด](https://github.com/ModulesX1/ModulesX1.github.io/tree/main/assets/NewAlert)
+ลิงค์สคริปต์และสไตล์ [ดูโค้ดเต็ม](https://github.com/ModulesX1/ModulesX1.github.io/tree/main/assets/NewAlert)
 ``` html
 <!-- in head tag -->
 <link rel="preload stylesheet" as="style" href="https://modulesx1.github.io/assets/NewAlert/style.min.css">
