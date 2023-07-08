@@ -1,4 +1,4 @@
-## New Alert System for Website
+## New Alert System v1.2.0
 
 ลิงค์สคริปต์และสไตล์ [ดูโค้ดเต็ม](https://github.com/ModulesX1/ModulesX1.github.io/tree/main/assets/NewAlert)
 ``` html
